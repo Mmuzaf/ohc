@@ -35,7 +35,6 @@ import org.caffinitas.ohc.OHCacheStats;
 import org.caffinitas.ohc.histo.EstimatedHistogram;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -343,8 +342,7 @@ public class ChunkedFixedCacheImplTest
         }
     }
 
-    @Test
-    @Ignore
+    @Test(enabled = false)
     public void testHotKeyIterator() throws Exception
     {
         try (OHCache<Integer, String> cache = cache())
@@ -477,8 +475,7 @@ public class ChunkedFixedCacheImplTest
         }
     }
 
-    @Test
-    @Ignore
+    @Test(enabled = false)
     public void testHotKeyBufferIterator() throws Exception
     {
         try (OHCache<Integer, String> cache = cache())
